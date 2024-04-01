@@ -1,56 +1,19 @@
-﻿using System;
+using System;
 
 public class Calculator
 {
     public static void Main(string[] args)
     {
-        char opr;
-        float first, second;
+        // Modify code below this line
+        Console.Write("Enter an operation (+, -, /, *): ");
+        char opr = Console.ReadLine()[0];
 
-        while (true)
-        {
-            try
-            {
-                Console.Write("Enter an operation (+, -, /, *): ");
-                opr = Console.ReadLine()[0];
+        Console.Write("Enter the first number: ");
+        float first = float.Parse(Console.ReadLine());
 
-                // 'Contains' method checks if a string contains a character or a substring.
-                if ("/-+*".Contains(opr))
-                    break;
-
-            }
-            catch { }
-            Console.WriteLine("The operator is invalid.");
-        }
-
-        while (true)
-        {
-            try
-            {
-                Console.Write("Enter the first number: ");
-                first = float.Parse(Console.ReadLine());
-                break;
-            }
-            catch
-            {
-                Console.WriteLine("The first number is invalid. ");
-            }
-        }
-
-        while (true)
-        {
-            try
-            {
-                Console.Write("Enter the second number: ");
-                second = float.Parse(Console.ReadLine());
-                break;
-            }
-            catch
-            {
-                Console.WriteLine("The second number is invalid. ");
-            }
-        }
-
+        Console.Write("Enter the second number: ");
+        float second = float.Parse(Console.ReadLine());
+        // Modify code above this line
 
         float result = 0;
         if (opr == '+')
